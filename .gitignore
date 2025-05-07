@@ -1,0 +1,7 @@
+Examples/OUT/
+Examples/
+.venv/
+__pycache__/
+.cursorrules
+.ipynb_checkpoints/
+ResumeOptimizer/

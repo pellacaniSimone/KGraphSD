@@ -1,0 +1,3 @@
+psycopg2-binary # postgresql with graph, timeseries and vector exansions
+gradio 
+requests 
