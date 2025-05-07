@@ -1,7 +1,7 @@
 # KGraphSD - Knowledge Graph Software Development Framework
 
 ## Overview
-KGraphSD is a powerful library designed for testing and developing applications using PostgreSQL as a multi-paradigm database. It provides a robust framework for building applications that leverage PostgreSQL's capabilities for vector storage, graph operations, and relational data management.
+KGraphSD is a powerful library designed for testing and developing applications using PostgreSQL as a multi-paradigm database. It provides a robust framework for building applications that leverage PostgreSQL's capabilities for vector storage, graph operations, relational data management, and time series analysis.
 
 ## Architecture
 The project follows the Model-View-Controller (MVC) pattern for optimal maintainability and separation of concerns:
@@ -31,6 +31,7 @@ The core database connector that handles:
 - Vector storage and retrieval
 - Graph operations using Apache AGE
 - Relational data management
+- Time series data with TimescaleDB integration
 
 ### 2. Backend Parameters (`be_param/`)
 Contains backend implementations for different applications:
@@ -42,6 +43,7 @@ Gradio-based user interface that provides:
 - Interactive data input forms
 - Knowledge graph visualization
 - Real-time data processing feedback
+- Time series data visualization
 
 ## Class Diagram
 
@@ -99,8 +101,15 @@ classDiagram
 
 ### Prerequisites
 - PostgreSQL with Apache AGE extension
+- TimescaleDB extension for time series support
 - Python 3.8+
 - Required Python packages (see requirements.txt)
+
+- Debian 12 dependencies 
+```
+apt install postgresql-17-timescaledb postgresql-17-pgvector postgresql-17-age
+```
+
 
 ### Configuration
 All modifications should be made in the `Const` class of your application. This includes:
@@ -109,6 +118,7 @@ All modifications should be made in the `Const` class of your application. This 
 - Vector dimensions
 - SQL queries
 - AGE graph configurations
+- TimescaleDB hypertable settings
 
 ### Creating a New Application
 1. Use `test_app` as a template
@@ -123,6 +133,7 @@ All modifications should be made in the `Const` class of your application. This 
 3. Follow the MVC pattern for new features
 4. Implement proper error handling and logging
 5. Use type hints for better code maintainability
+6. Leverage TimescaleDB for efficient time series data management
 
 ## Contributing
 1. Fork the repository
@@ -130,3 +141,9 @@ All modifications should be made in the `Const` class of your application. This 
 3. Commit your changes
 4. Push to the branch
 5. Create a Pull Request
+
+## License
+[Your License Here]
+
+## Contact
+[Your Contact Information]
