@@ -142,8 +142,3 @@ All modifications should be made in the `Const` class of your application. This 
 4. Push to the branch
 5. Create a Pull Request
 
-## License
-[Your License Here]
-
-## Contact
-[Your Contact Information]
